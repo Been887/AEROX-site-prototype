@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheelspin Racing</title>
+    <link rel="icon" href="resources/favicon.jfif" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+    <div class="topbar" id="topbar">
+        <a onclick="curID=0; refresh()">Home</a>
+        <a onclick="curID=1; refresh()">About Us</a>
+        <a onclick="curID=2; refresh()">Logs & Tutorials</a>
+        <a onclick="curID=3; refresh()">News</a>
+        <a onclick="curID=4; refresh()">Contact Us</a>
+    </div>
+
+    <div class="sidebar" id="sidebar" style="padding-left: 0.5vw">
+        <img src="resources/pc_crash.png" style="width: 1.5vw; height: 1.5vw; position: relative; left: 9.25vw; top: 25.5vh; border-radius: 0.5vw" onclick="sidebarOpen=!sidebarOpen; sidebarRefresh();" /> <!-- this is the open and close button -->
+
+        <div id="logsSidebar">
+            <h2 style="font-weight: bold; text-decoration: underline; font-size: 1.5vh">Logs and Tutorials</h2>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content"> 
+        <div id="0"> <!-- HOMEPAGE -->
+            <div class="banner">
+                <img src="resources/UglyBannerDemo.png" />
+
+                <div class="blurBG floatingBox" style="top: 45px;">
+                    <h1 style="font-size: 15vh">AEROX Racing!</h1>
+                    <h2>Future of the <strong style="color: yellow;">fastest</strong></h2>
+                </div>
+
+                <p class="blurBG floatingBox" style="top: 70%; left: 1vw; max-width: 45vw">
+                    <strong style="font-size: 60px;">The Best STEM Racing team of 2026!</strong><Br>
+                    A team of 5 competing in <strong><a href="https://www.stemracing.co.uk/" target="_blank">STEM Racing Pro Class</a></strong>.<br>
+                    the team - <strong>Avi, Ben, Shaan and Seb.</strong>
+                    write something here
+                    
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                    write something here<br>
+                </p>
+
+                <div style="background-color: rgb(255, 249, 222); top: 70%; max-width: 40vw; left: 59vw" class="floatingBox softBG">
+                    <p>
+                        sample text sample text sample text sample text sample text sample text sample text sample text                         sample text sample text sample text sample text sample text sample text sample text sample text                        sample text sample text sample text sample text sample text sample text sample text sample text
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="1"> <!-- about us page -->
+            <p>this is page #3, id=2</p>
+            <h1>title</h1>
+            <p>some text under the title</p>
+            <img src="resources/pc_crash.png"/>
+        </div>
+
+        <div id="2"> <!-- tutorials and Logs page -->
+            <div class="banner"> 
+                <img src="resources/pc_crash.png" style="height: 25vh;" />
+                <h1 class="floatingBox" style="top: 4vh; font-size: 15vh">Tutorials and Logs</h1>
+            </div>
+        </div>
+
+        <div id="3"> <!-- News page -->
+            <p>this is page #4, id=3</p>
+        </div>
+
+        <div id="4"> <!-- Contact us page -->
+            <p>this is page #5, id=4</p>
+        </div>
+
+        <div id="5"> <!-- tut/log -> Car Design -->
+            <div class="banner">
+                <img src="resources/UglyBannerDemo.png" />
+                <div class="blurBG floatingBox" style="top: 45px;">
+                <h1>The Car></h1>
+                <h2 style="font-weight: bold">Design Log (tutorial further on)</h2>
+                </div>
+                <img src="resources/UglyBannerDemo.png" style="position:absolute; z-index: 99; width: 60%; height: auto; left: 40%; top: 35%; border-radius: 5%; border: 1px solid black" />
+
+                <div class="blurBG floatingBox" style="top: 24vh; left: 1vw; max-width: 35vw">
+                    <h2 style="text-align: left; font-weight: bold; text-decoration: underline">Selecting a CAD Modeler</h2>
+                    <p>
+                        A lot of thought was put into the design of the car.<br>
+                        At first I tried to use Blender to create a model, which was a challenge to navigate as a beginner, only to realise that Blender is built around renders not specifications and parameters, 
+                        and the car I made with it had a long way to go.<br><br>
+                        
+                        My second thought was to learn how to CAD, but which one? FreeCad. Not an amazing first choice but allowed me to learn the foundations of Computer Aided Design, locally (but with weird function names).<br><br>
+
+                        After a few progress losses, crashes and failed intersections i moved to <a href="https://www.onshape.com/" target="_blank" style="font-weight: bold;">Onshape</a> (student license), which i 
+                        <strong>would reccomend</strong>, although it seemed very confusing with assemblies and part studios, it does not crash or lag nearly as much as freecad (on a school laptop) and was easy to me after learning so much software.<br><br>
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

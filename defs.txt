@@ -1,0 +1,5 @@
+1.CAD
+CAD stands for Computer Aided Design, and refers to softwares that allow people to design things (commonly 3D structures and models) to a specification for manufacturing. Modern CADs are often parametric.
+}
+
+2.

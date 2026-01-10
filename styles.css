@@ -1,0 +1,138 @@
+body::-webkit-scrollbar {/*gets rid of the ugly scroll wheel on the website*/
+    display: none;
+}
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    z-index: 1;
+    text-decoration: none;
+}
+body a {
+    color: rgb(0, 21, 255);
+}
+                                            /*TOPBAR CODE*/
+/*.topbar {
+    display: flexbox;
+}*/
+.topbar {
+    display: flex;
+    position: fixed;  /* Use fixed position to keep it at the top of the page */
+    top: 0;  /* Align to the top */
+    left: 0;  /* Align to the left */
+    width: 100vw;  /* Make it span the entire width of the viewport */
+    max-height: 4vh;
+    background-color: whitesmoke;  /* Ensure the background color matches */
+    z-index: 10;  /* Make sure it's above other content */
+
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    border-bottom: 2px solid black;
+    transition: top 0.25s ease;
+}
+
+.topbar a {
+    text-decoration: none;
+    height: 4vh;
+    width: calc(100vw/5);  /* Edit this as per how many topbar elements there are - 100vw is 100% viewport width */
+    text-align: center;
+    color: black;
+    background-color: whitesmoke;
+    border-right: 1px solid black;
+}
+.topbar a:hover {
+    z-index: 0;
+    background-color: rgb(227, 227, 227);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.sidebar {
+    position: fixed;
+    display: block;
+    left: 0;
+    top: 25.5vh;
+    width: 10vw;
+    height: 60vh;
+    margin: 0;
+    padding:  0;
+    font-family: monospace;
+    
+    border-radius: 1vh;
+    background-color: rgba(255, 243, 175, 0.712);
+    transition: left 0.2s ease-in;
+}
+
+                                            /* BANNER CODE */
+.banner {
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.banner h1 {
+    margin: 0;
+    width: 100vw;
+    height: auto;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 100px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.banner h2 {/*TAGLINE*/
+    margin: 0;
+    width: 100vw;
+    height: auto;
+    font-weight: lighter;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    text-align: center;
+    padding: 10px;
+}
+
+.banner p {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: light;
+    padding: 5px;
+}
+.floatingBox {
+    display: block;
+    position: absolute;
+    z-index: 2;
+}
+.blurBG {
+    backdrop-filter: blur(7px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    padding: 1vh;
+}
+.softBG { /* Rounded corners on a translucent or opaque background looks nice */
+    background-color: whitesmoke;
+    padding: 1vh;
+    border-radius: 2vh;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.banner img {
+    z-index: -1;
+    position: relative;
+    width: 100%;
+    height: /*auto;*/calc(width/(100vw/100vh)*1px);
+    overflow-x: hidden;
+}
+
+                                            /* SPLIT BANNER CODE */
+.split {
+    top: 0;
+    position: relative;
+    padding: 20px 0;
+}
