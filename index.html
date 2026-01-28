@@ -21,10 +21,12 @@
         <img src="resources/pc_crash.png" style="width: 1.5vw; height: 1.5vw; position: relative; left: 9.25vw; top: 25.5vh; border-radius: 0.5vw" onclick="sidebarOpen=!sidebarOpen; sidebarRefresh();" /> <!-- this is the open and close button -->
 
         <div id="logsSidebar">
-            <h2 style="font-weight: bold; text-decoration: underline; font-size: 1.5vh">Logs and Tutorials</h2>
-            <ul>
-                <li></li>
-            </ul>
+            <h2 style="font-weight: bold; text-decoration: underline; font-size: 1.5vh" onclick="curID=2; refresh();">Logs and Tutorials</h2>
+
+            <h3>CAD Design ></h3>
+            <h3>Car Design ></h3>
+            <a onclick="curID=5; refresh();"> Designing the car</a>
+            <h3>Web Design (static) ></h3>
         </div>
     </div>
 
@@ -33,9 +35,9 @@
             <div class="banner">
                 <img src="resources/UglyBannerDemo.png" />
 
-                <div class="blurBG floatingBox" style="top: 45px;">
-                    <h1 style="font-size: 15vh">AEROX Racing!</h1>
-                    <h2>Future of the <strong style="color: yellow;">fastest</strong></h2>
+                <div class="floatingBox" style="top: 45px; color: rgba(255, 255, 255, 0.76)">
+                    <h1 style="font-size: 15vh; font-family: 'Quicksand'; font-weight: 300;"><span style="font-weight: 400;">aerox</span> racing</h1>
+                    <h2 style="font-family: 'Quicksand'; font-weight: 300;">Future of the <strong style="color: yellow;">fastest</strong></h2>
                 </div>
 
                 <p class="blurBG floatingBox" style="top: 70%; left: 1vw; max-width: 45vw">
@@ -79,7 +81,7 @@
         <div id="2"> <!-- tutorials and Logs page -->
             <div class="banner"> 
                 <img src="resources/pc_crash.png" style="height: 25vh;" />
-                <h1 class="floatingBox" style="top: 4vh; font-size: 15vh">Tutorials and Logs</h1>
+                <h1 class="floatingBox" style="top: 4vh; font-size: 8.5vw">Tutorials and Logs</h1>
             </div>
         </div>
 

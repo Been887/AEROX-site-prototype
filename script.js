@@ -26,7 +26,7 @@ document.addEventListener('scroll', () => {
 });
 
 function sidebarRefresh() {
-  sidebarOpen ? sidebar.style.left = "0" : sidebar.style.left = "-10.1vw";
+  sidebarOpen ? sidebar.style.left = "0" : sidebar.style.left = "-10.55vw";
   sidebarExists ? sidebar.style.display = "block" : sidebar.style.display = "none";
 }
 
