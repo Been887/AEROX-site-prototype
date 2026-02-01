@@ -1,0 +1,116 @@
+##title 0 -CAD Modelling
+resources/BGs/Cad Banner.png
+<h2 id="WhatIsCAD"> What is a CAD? - a brief intro to CAD Modelling</h2>
+<p>
+    <strong>CAD</strong> refers to Computer Aided Design, meaning that you create any design with the help of a computer.<br>
+    It most commonly refers to 3D modeling, but can refer to other things too, e.g. KiCAD, which is used to design circuitboards.<br>
+    STEM Racing involves more technical CADs e.g. Onshape, Fusion360, used for manufacturable design according to (tight) specifications.<br>
+    
+    <br><strong>The 2 Main types of CAD</strong><br>
+        <strong>Type 1 - Parametric ></strong> <br>
+        Parametric modelling refers to modelling based on previous actions etc, using stored data from what you have done to carry out more operations.<br>
+        This is very easy to iterate through, because changing just one operation can change the whole model, and can be changed as many times as you want, e.g. changing a fillet radius to make things smoother.<br>
+        Operations can also use variables, measurements and other operations (e.g. certain vertices/edges of another part), to make iteration even faster and for one edit to change the whole model. You also cannot lose your 'undo history' which the timeline stores (unless you forget to save obviously).<br>
+        <em>This tutorial will focus on parametric CADs unless specified otherwise.</em><br><br>
+        
+        <strong>Type 2 - Direct ></strong><br>
+        direct modelling means that the CAD does each action independently without referring to things that have been done before it, changing the model you have <strong>directly</strong>.<br> It can be faster becuase it doesn't have to load previous operations before doing things.<em>
+        actions/operations are not stored, meaning you can freely move parts/faces etc and edit with less buffer, but iteration becomes harder because you cannot simply change one value to make everything different.
+    </p>
+
+<h2>How Do You Use (Parametric) CADs? - Basics</h2>
+<div style="width: 50%; left: 60%; float: right;">
+    <img style="width: 80%" src="resources/Logs/intersection.png"/>
+    <img style="width: 80%" src="resources/Logs/Loft.png">
+    <img style="width: 80%" src="resources/Logs/Sweep.png"/>
+</div>
+<p>
+    As mentioned earlier, parametric CADs use operations and store them in the timeline. These operations include 'extrude', 'fillet' and 'boolean' : some of the core foundations of CAD.<br>
+    <em>Use the Searchbar to find any definitions you're unsure about.</em>
+
+    <strong>Basic Techniques</strong>
+    In order to make a basic shape, you must use a sketch. Sketches are 2d drawings that can be constrained using measurements etc.<br>
+    <li><strong>Sketches</strong> involve lines, curves, arcs, circles and constraints etc. The most primitive way to turn this into a shape is to extrude it. It is better if your sketch is fully <em>constrained</em> - meaning the sketch cannot be edited by hand and use values instead. Probably the most common and effective constraint is distance/dimension where it fixes a length or distance to a certain value (could be a variable etc). Sketches can only be extruded if they are closed faces.</li>
+    <li><strong>Extruding</strong> is pulling a face out further in it's (normal) direction, to turn a 2d shape into 3d. Onshape allows direct boolean operations from extrusion. FreeCAD renames this to 'pad'.</li>
+    <li><strong>Boolean</strong> operations are to subtract, intersect or join a part to another. Boolean intersect will keep where the parts/bodies intersect only, subtract will remove the intersection between the parts, and union will combine them.</li>
+    <li><strong>Filleting</strong> is to round a corner / corners. The fillet radius controls how big the fillet is or how deep it goes around the edge.</li>
+    <li><strong>Chamfering</strong> is to bevel a corner so it's less sharp. A chamfered edge is still not completely smooth.</li>
+    <li><strong>Lofting</strong> is a slightly more complex technique where the CAD creates a solid between 2 surfaces or faces e.g. loft between circle and square. It can be used to make tapered surfaces/objects. It sometimes involves having to <strong>offset surface</strong>s into place which is another operation to be covered in "Designing the car".</li>
+    <li><strong>Sweeping</strong> is another slightly more complex technique, where the CAD uses a 2D non complex face and runs it along a path to make a 3d object, can be used for wings and pipes etc.</li>
+    <li><strong>Revolving</strong> is a useful but niche operation where the CAD uses a 2d non complex face and rotates it around an axis, to create a 3d object. This includes making a 3d teardrop out of a 2d teardrop sketch via revolution</li>
+
+    <br>
+    <li>A good technique to make fairly complex shapes is to <strong>intersect sketch extrusions</strong>.</p>This keeps the cross-sectional and essentially turns 2 sketches into one 3d object. Onshape (my CAD of choice at the time of coding this site) has a feature to intersect directly from the extrusion operation, which is useful and time saving.</li>
+
+
+<p>
+    <strong>This is only basic and other techniques are shared in other logs e.g.</strong>
+    <li>Designing the Car</li>
+    <li>Designing the Wind Tunnel</li>
+    although, the definitions are still included in the def search.
+
+</p>
+
+<h2>How I Learned CAD</h2>
+<p>
+    <em>Please note - it's more effective short term to choose a CAD for what you need than to learn all of the open source ones first (even thought it's extra knowledge).</em><br><br>
+
+    <strong>Blender ></strong>
+    In year 7, I found animation interesting and thought that mastering Blender would be great for designing in "F1 in schools" (now callled STEM Racing) which had just been introduced to our school at the time. It was not.<br>
+    Blender is amazing for renders, but took me a long time to learn fully, only realise it wasn't the right tool due to lack of technicality and no parametric features.<br>
+    Blender is meshed/topology based, and although proportional editing is nice, and the render features (which i used for car renders) are amazing, it's made for displaying rather than designing.<br><br>
+
+    <strong>TinkerCAD ></strong>
+    After making a car using Blender, I wanted to discover the features of a 'real CAD', which were supposedly much better.
+    TinkerCAD, for me, was an infuriating development process that i got nowhere with even after months of learning. I found that the lack of tools along with a UI/navigation too different to blender hindered me, and left the team before my blender-designed car raced in entry class. This doesn't mean TinkerCAD is useless, just it wasn't for me.<br><br>
+
+    <strong>FreeCAD ></strong>
+    Making a re-arrival for Pro-Class, I decided parametric was the way to go after reading up on CADs. Since i prefered local apps for offline development, and fusion 360 wanted my full name, address and others for a student license, I chose the open source alternative;<br>
+    FreeCAD is easier to get the hang of than Onshape, but Onshape is more polished. It does have some strangely named features like changing extrude to 'pad', but is effective and allowed me to learn the basics of CAD.
+    after running into limitations with the fillet tool, extreme lag and crashes, losing hours of progress in total (possibly due to outdated school hardware), the switch I needed seemed obvious.<br><br>
+
+    <strong>Onshape ></strong>
+    If my team hadn't encouraged me to use onshape, i probably would've chosen another local CAD which likely isn't much better than FreeCAD. Learning Onshape was almost as challenging as Blender without any prior knowledge, especially with my experience of FreeCAD's function names.<br>
+    assemblies had me confused for a while - as nobody knew what one was or how it worked. Even though there is slight lag to onshape, the navigation is customisable, and cloud based nature allowed seamless transitions to windows for CFD or FEM testing.<br>
+    
+</p>
+
+
+<h2 id="tut">Pros and Cons></h2>
+<p>
+    Depending on what you aim for e.g. <a href="#definitions">parametric</a> or not, the criteria changes massively.<br>
+
+    <strong>Parametric Modelers help with > <br> </strong>
+</p>
+
+<li>iteration - repeating changes until correct</li>
+<li>Keeping up to date - if you change an operation, everything after it will change accordingly</li>
+<li>Linking everything - You can make measurement variables, universal variables, and use other bodies etc as references etc</li>
+<li>Many more for you to try out</li>
+
+<p>
+<strong>Parametric modellers include ></strong></p>
+<li>Onshape</li>
+<li>FreeCAD</li>
+<li>Fusion 360 (parametric mode)</li><br>
+
+
+<p><strong>Direct Modelers help with > </strong></p>
+
+<li>Loading times - after a lot of operations/features, actions etc can become sluggish in parametric, especially in web based CADs. Direct has less things to load every operation.</li>
+<li>Static copies - sometimes you want to copy something and edit it, this is hard because most parametric CADs only allow exact unmodified "derived" copies. Direct allows things to be done without any interference</li>
+<li>Topologies/barebones - it is very rare for a parametric modeler to allow direct surface editing e.g. delete this vertice, only uses given operations, Direct can often change the surface very <em>directly</em>.</li>
+
+<p><strong>Direct modellers include ></strong></p>
+<li>Fusion 360 (direct mode)</li>
+<li>Blender (not reccomended for technical design)</li>
+<li>TinkerCAD (not reccomended for advanced modelling)</li>
+<li>ANSYS spaceclaim</li>
+<li>shapr3d</li>
+#~#
+
+##title 1 -Designing The Car
+resources/BGs/Car Design Banner.png
+
+
+#~#

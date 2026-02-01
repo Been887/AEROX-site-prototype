@@ -1,18 +1,46 @@
 @font-face {/* Quicksand Light font */
     font-family: 'Quicksand';
-    src: url(resources/Quicksand_Light.woff2) format('woff2');
+    src: url(resources/fonts/quicksand/Quicksand_Light.woff2) format('woff2');
     font-weight: 300;
     font-style: normal;
 }
 @font-face {/* Quicksand Book (normal) font */
     font-family: 'Quicksand';
-    src: url(resources/Quicksand_Book.woff2) format('woff2');
+    src: url(resources/fonts/quicksand/Quicksand_Book.woff2) format('woff2');
     font-weight: 400;
     font-style: normal;
 }
+/*@font-face  { /*charger normal*/
+/*    font-family: 'Charger';
+    src: url(resources/fonts/charger/Charger.woff2) format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face { /*charger italic*/
+/*    font-family: 'Charger';
+    src: url(resources/fonts/charger/ChargerItalic.woff2) format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {/*charger bold*/
+/*    font-family: 'Charger'; /*this is the charger font import that is commented out. uncomment and add charger back into the project if needed.
+    src: url(resources/fonts/charger/ChargerBold.woff2) format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}*/
 
 body::-webkit-scrollbar {/*gets rid of the ugly scroll wheel on the website*/
     display: none;
+}
+#pagecontent p {
+    width: 50%;
+}
+#pagecontent li {
+    width: 50%;
+}
+#pagecontent img {
+    position: relative;
+    float: right;
 }
 body {
     padding: 0;
@@ -23,6 +51,28 @@ body {
 }
 body a {
     color: rgb(0, 21, 255);
+}
+p {
+    font-size: 2vh;
+    font-family: sans-serif;
+
+    word-spacing: 0.1em;
+    letter-spacing: 0.05em;
+}
+li {
+    font-size: 2vh;
+    font-family: sans-serif;
+
+    word-spacing: 0.1em;
+    letter-spacing: 0.05em;
+}
+h1 {
+    font-size: 6vh;
+    font-family: sans-serif
+}
+h2 {
+    font-size: 4.5vh;
+    font-family: sans-serif;
 }
                                             /*TOPBAR CODE*/
 /*.topbar {
@@ -77,13 +127,26 @@ body a {
     font-family: monospace;
     z-index: 10;
     border-radius: 1vh;
-    background-image: url(resources/stripes\ background.png);
+    background-image: url(resources/textBGs/stripes\ background.png);
     background-position:left, top;
     background-repeat: no-repeat;
     background-size: auto 100%;
     border: 1px solid rgba(0, 0, 0, 0.5);
     transition: left 0.2s ease-in;
 }
+.searchbar input {
+    position: relative;
+    display: block;
+    width: 80vw;
+    height: 7vh;
+    font-size: 4vh;
+    text-align: center;
+    border: none;
+    margin-left: 10vw;
+    border-radius: 5vh;
+
+}
+
 
                                             /* BANNER CODE */
 .banner {
@@ -128,7 +191,7 @@ body a {
 }
 .blurBG {
     backdrop-filter: blur(7px);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.45);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
     padding: 1vh;
 }

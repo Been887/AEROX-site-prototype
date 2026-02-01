@@ -1,11 +1,15 @@
 /*idea is to use only one html file for the whole website to save code,
 then use js to select which div is open*/
-let curID = 2;
+let curID = 0;
+let logPage = 0;
 let sidebarOpen = false, sidebarExists;
 let lastScrollTop = window.scrollY;
 
-//const fs = require("fs");
+let logsTitle ="";
+let logsBannerIMG ="";
+let logsHTML ="";
 
+const searchbarInput = document.getElementById("searchbarInput");
 const content = document.getElementById("content");
 const pgs = content.children;
 const topbar = document.getElementById("topbar");
@@ -25,9 +29,42 @@ document.addEventListener('scroll', () => {
   lastScrollTop = currentScrollTop; // Update for next event
 });
 
+async function loadLogs(page) {
+  const res = await fetch("logs.txt");
+  const rawText = await res.text();
+  const lines = rawText.split("\n");
+
+  const pages = [];
+  let current = null;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+
+    if (line.startsWith("##title "+page+" -")) {
+      logsTitle = lines[i].slice(11).trim();
+      i++;
+      logsBannerIMG = lines[i].trim();
+      i++;
+      logsHTML = "";
+      while(!lines[i].startsWith("#~#")) {
+        logsHTML = logsHTML+lines[i]+"\n";
+        i++;
+      }
+      break;
+    }
+  }//this part loads the logs into global variables.
+
+  document.getElementById("addTitle").innerHTML = logsTitle;
+  document.getElementById("bannerIMG").src = logsBannerIMG;
+  document.getElementById("addContent").innerHTML = logsHTML;
+
+  return;
+}
+
 function sidebarRefresh() {
   sidebarOpen ? sidebar.style.left = "0" : sidebar.style.left = "-10.55vw";
   sidebarExists ? sidebar.style.display = "block" : sidebar.style.display = "none";
+  loadLogs(logPage);
 }
 
 //function for when user clicks a local link
