@@ -22,54 +22,50 @@
                 </div>
 
 
-                <h1 class="blurBG" class="floatingBox" style="top: 0; max-width: 50%; position: absolute; left: 2vw">CAD Modelling</h1>
+                <h1 class="blurBG" class="floatingBox" style="top: 0; max-width: 50%; position: absolute; left: 2vw">Designing the Car</h1>
             </div>
 
             <h1></h1>
             <div id="pagecontent" style="left: 1vw; position: relative">
                 <div>
-                <h2 id="WhatIsCAD"> What is a CAD? - a brief intro to CAD Modelling</h2>
+                <h2 id="WhatIsCAD">How I designed the car - and how you can too</h2>
                 <p>
-                    <strong>CAD</strong> refers to Computer Aided Design, meaning that you create any design with the help of a computer.<br>
-                    It most commonly refers to 3D modeling, but can refer to other things too, e.g. KiCAD, which is used to design circuitboards.<br>
-                    STEM Racing involves more technical CADs e.g. Onshape, Fusion360, used for manufacturable design according to (tight) specifications.<br>
+                    I learned how to design STEM Racing cars by following the 
+                    <a target="_blank" href="https://www.google.com/search?aic=0&bih=559&biw=1280&dpr=1.5&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiK
+                    paEWjvZ2Py1XXV8d8KvlI3vxYI1tojT_24H7Q4iMwclQ1_FGoCYCiD5kV0oQ7ow8lMCJRSOjafOPGpXawtuF0B8qz91W7DTca5AapViKRL3Ekf47rnv7R
+                    OqrtRShSUr4VBdskv5SRv6TZq0GkgnlrFS-qkreNW71uMNkS3sa1mK9mx6-DLTOpVdR1XbYaCM9qO8OhhA&q=off+the+track+car+design+tutoria
+                    l&rlz=1C1GCEA_enGB1115GB1115&sa=X&safe=active&sca_esv=358352e6032d6e12&surl=1&sxsrf=ANbL-n7lm_h9F3NAqgZHHdrezXxNx_wSx
+                    Q%3A1770032609194&tbs=li%3A1&udm=7&ved=2ahUKEwimtqWn3bqSAxVkif0HHXMHAHYQtKgLegQIDxAB" >Off The Track Youtube tutorial</a>, which was very helpful, but I found hard as someone who was inexperienced at Onshape.<br><br>
                     
-                    <br><strong>The 2 Main types of CAD</strong><br>
-                        <strong>Type 1 - Parametric ></strong> <br>
-                        Parametric modelling refers to modelling based on previous actions etc, using stored data from what you have done to carry out more operations.<br>
-                        This is very easy to iterate through, because changing just one operation can change the whole model, and can be changed as many times as you want, e.g. changing a fillet radius to make things smoother.<br>
-                        Operations can also use variables, measurements and other operations (e.g. certain vertices/edges of another part), to make iteration even faster and for one edit to change the whole model. You also cannot lose your 'undo history' which the timeline stores (unless you forget to save obviously).<br>
-                        <em>This tutorial will focus on parametric CADs unless specified otherwise.</em><br><br>
-                        
-                        <strong>Type 2 - Direct ></strong><br>
-                        direct modelling means that the CAD does each action independently without referring to things that have been done before it, changing the model you have <strong>directly</strong>.<br> It can be faster becuase it doesn't have to load previous operations before doing things.<em>
-                        actions/operations are not stored, meaning you can freely move parts/faces etc and edit with less buffer, but iteration becomes harder because you cannot simply change one value to make everything different.
-                    </p>
+                    I think it's definitely a good idea to make a few practice cars to learn how and get the hang of it, for the final 
+                    car to be modelled well. In my pro class season, I made a total of 7 cars using onshape, each one more refined than the last.
+                    E.g. if the geometries and parametric features break (beyond fixing) due to a bad variable etc, it's better to make another 
+                    model and use the CAD more, before your model becomes perfect and you never break the cad again.<br><br>
 
-                <h2>How Do You Use (Parametric) CADs? - Basics</h2>
+                    This web page shows the development of my car, how I did it, and how you can too.<br>
+                </p>    
+
+                <h2>Stage 1 - the body</h2>
                 <div style="width: 50%; left: 60%; float: right;">
-                    <img style="width: 80%" src="resources/Logs/intersection.png"/>
-                    <img style="width: 80%" src="resources/Logs/Loft.png">
-                    <img style="width: 80%" src="resources/Logs/Sweep.png"/>
+                    <img style="width: 80%" src="resources/Logs/body intersection.png"/>
                 </div>
+
                 <p>
-                    As mentioned earlier, parametric CADs use operations and store them in the timeline. These operations include 'extrude', 'fillet' and 'boolean' : some of the core foundations of CAD.<br>
-                    <em>Use the Searchbar to find any definitions you're unsure about.</em>
+                    As mentioned earlier, the body is usually made with an intersection, this makes a fairly complex shape while 
+                    keeping it machinable (since the car must be CNCd from a foam block). A topdown and sideon extrusion is best, 
+                    but you should still experiment with other techniques.<br><br>
 
-                    <strong>Basic Techniques</strong>
-                    In order to make a basic shape, you must use a sketch. Sketches are 2d drawings that can be constrained using measurements etc.<br>
-                    <li><strong>Sketches</strong> involve lines, curves, arcs, circles and constraints etc. The most primitive way to turn this into a shape is to extrude it. It is better if your sketch is fully <em>constrained</em> - meaning the sketch cannot be edited by hand and use values instead. Probably the most common and effective constraint is distance/dimension where it fixes a length or distance to a certain value (could be a variable etc). Sketches can only be extruded if they are closed faces.</li>
-                    <li><strong>Extruding</strong> is pulling a face out further in it's (normal) direction, to turn a 2d shape into 3d. Onshape allows direct boolean operations from extrusion. FreeCAD renames this to 'pad'.</li>
-                    <li><strong>Boolean</strong> operations are to subtract, intersect or join a part to another. Boolean intersect will keep where the parts/bodies intersect only, subtract will remove the intersection between the parts, and union will combine them.</li>
-                    <li><strong>Filleting</strong> is to round a corner / corners. The fillet radius controls how big the fillet is or how deep it goes around the edge.</li>
-                    <li><strong>Chamfering</strong> is to bevel a corner so it's less sharp. A chamfered edge is still not completely smooth.</li>
-                    <li><strong>Lofting</strong> is a slightly more complex technique where the CAD creates a solid between 2 surfaces or faces e.g. loft between circle and square. It can be used to make tapered surfaces/objects. It sometimes involves having to <strong>offset surface</strong>s into place which is another operation to be covered in "Designing the car".</li>
-                    <li><strong>Sweeping</strong> is another slightly more complex technique, where the CAD uses a 2D non complex face and runs it along a path to make a 3d object, can be used for wings and pipes etc.</li>
-                    <li><strong>Revolving</strong> is a useful but niche operation where the CAD uses a 2d non complex face and rotates it around an axis, to create a 3d object. This includes making a 3d teardrop out of a 2d teardrop sketch via revolution</li>
 
-                    <br>
-                    <li>A good technique to make fairly complex shapes is to <strong>intersect sketch extrusions</strong>.</p>This keeps the cross-sectional and essentially turns 2 sketches into one 3d object. Onshape (my CAD of choice at the time of coding this site) has a feature to intersect directly from the extrusion operation, which is useful and time saving.</li>
+                </p>
 
+                <h2>Making Sketches</h2>
+                <p>
+                    Sketches can be a bit hard to grasp at first, but once you learn constraints and parametric features they become very useful.<br>
+
+                    the most common constraints include > 
+                    <li>horizontal/vertical - constraints vertices or a line to be horizontal or vertical (depending on which you choose)</li>
+                    <li>dimension - constrains a distance between 2 vertices, a dimension of something </li>
+                </p>
 
                 <p>
                     <strong>This is only basic and other techniques are shared in other logs e.g.</strong>

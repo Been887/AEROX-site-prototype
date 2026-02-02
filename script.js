@@ -1,6 +1,6 @@
 /*idea is to use only one html file for the whole website to save code,
 then use js to select which div is open*/
-let curID = 0;
+let curID = 2;
 let logPage = 0;
 let sidebarOpen = false, sidebarExists;
 let lastScrollTop = window.scrollY;
