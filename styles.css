@@ -84,7 +84,7 @@ h2 {
     top: 0;  /* Align to the top */
     left: 0;  /* Align to the left */
     width: 100vw;  /* Make it span the entire width of the viewport */
-    max-height: 8vh;
+    max-height: 5vh;
     background-color: whitesmoke;  /* Ensure the background color matches */
     z-index: 10;  /* Make sure it's above other content */
 
@@ -102,7 +102,8 @@ h2 {
 
 .topbar a {
     text-decoration: none;
-    height: 8vh;
+    height: 5vh;
+    font-size: 4vh;
     width: calc(100vw/5);  /* Edit this as per how many topbar elements there are - 100vw is 100% viewport width */
     text-align: center;
     color: black;
