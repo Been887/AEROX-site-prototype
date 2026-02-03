@@ -19,6 +19,24 @@ resources/BGs/Cad Banner.png
     </p>
 
 <h2>How Do You Use (Parametric) CADs? - Basics</h2>
+
+<h2>Making Sketches</h2>
+<p>
+    Sketches can be a bit hard to grasp at first, but once you learn constraints and parametric features they become very useful.<br>
+
+    the most common constraints include > 
+    <li>horizontal/vertical - constraints vertices or a line to be horizontal or vertical (depending on which you choose)</li>
+    <li>dimension - constrains a distance between 2 vertices, a dimension of something e.g. diameter of a sphere or angle of line</li>
+    <li>constructive - allows you to make a feature that is not counted as a shape so you can use it for other constraints or placement</li>
+    <li>perpendicular - perpendicular of 2 lines</li>
+    <li>midpoint - constrains something to the midpoint of a line (middle)</li>
+    <li>equal - lengths of 2 lines must be the same</li>
+    <li>parallel - parallel of 2 lines</li>
+    <li>use/derived - derived feature from somewhere in the part studio or context to use in your sketch (cannot edit)</li>
+    <li>mirror - when you apply a mirror operation in a sketch it mirrors it permanently.</li>
+    Sketches are an example of direct modelling because they don't store operations (so you can do free fillets/mirrors etc).
+</p>
+
 <div style="width: 50%; left: 60%; float: right;">
     <img style="width: 80%" src="resources/Logs/intersection.png"/>
     <img style="width: 80%" src="resources/Logs/Loft.png">
